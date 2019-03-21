@@ -12,9 +12,7 @@ questionArray = [question1, question2, question3]
 
 function askQuestion(arr){
   random = Math.floor(Math.random() * 3);
-  console.log(arr[random].answers[0])
-  console.log(arr[random].answers[1])
-  console.log(arr[random].answers[2])
+  arr[random].answers.map(answer => console.log(answer))
   var ans = prompt(arr[random].question)
   isItCorrect(random, ans);
 }
