@@ -16,6 +16,15 @@ function askQuestion(arr){
   console.log(arr[random].answers[1])
   console.log(arr[random].answers[2])
   var ans = prompt(arr[random].question)
+  isItCorrect(random, ans);
+}
+
+function isItCorrect(question, answer){
+  if (questionArray[question].correctAnswer == answer) {
+    console.log("Yes it is correct! You're a genius!")
+  } else {
+    console.log("No that's not correct, you really botched it!")
+  }
 }
 
 askQuestion(questionArray);
